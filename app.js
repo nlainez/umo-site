@@ -21,13 +21,31 @@ app.use(methodOverride("_method"));
 app.engine('html', require('ejs').renderFile);
 /*========================================================================================================*/
 app.get("/", function(req, res){
-	//res.rdirect("/subcomponeents");
 	res.redirect('index');
-
 });
 
 app.get("/index", function(req, res){
 	res.render('index');
+});
+
+app.get("/company", function(req, res){
+	res.render('company/company');
+});
+
+app.get("/services", function(req, res){
+	res.render('services/services');
+});
+
+app.get("/services/ourOffer", function(req, res){
+	res.render('services/ourOffer');
+});
+
+app.get("/services/techMethNorm", function(req, res){
+	res.render('services/techMethNorm');
+});
+
+app.get("/contactUs", function(req, res){
+	res.render('contactUs/contactUs');
 });
 
 /*========================================================================================================*/
