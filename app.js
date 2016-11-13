@@ -1,13 +1,12 @@
-var express			= require('express');
-var cookieParser	= require('cookie-parser');
-var bodyParser		= require('body-parser');
-var methodOverride	= require('method-override');
-var pages 			= require('./pages');
+var express 				= require('express');
+var cookieParser 		= require('cookie-parser');
+var bodyParser 			= require('body-parser');
+var methodOverride 	= require('method-override');
 
-var app				= express();
+var app 	= express();
 
-var port			= process.env.PORT || 3000;
-var ip				= process.env.IP;
+var port 	= process.env.PORT || 3000;
+var ip 		= process.env.IP;
 
 app.set('views', 'views');
 app.set("view engine", "ejs");
@@ -23,14 +22,12 @@ app.engine('html', require('ejs').renderFile);
 /*========================================================================================================*/
 app.get("/", function(req, res){
 	//res.rdirect("/subcomponeents");
-	res.redirect('/index');
+	res.redirect('index');
 
 });
 
 app.get("/index", function(req, res){
-	//res.rdirect("/subcomponeents");
-	res.redirect('/index');
-
+	res.render('index');
 });
 
 /*========================================================================================================*/

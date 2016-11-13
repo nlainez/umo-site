@@ -1,1 +1,8 @@
 /* CSS Attributes for UMO site */
+@media (min-height: 320px) {
+  .ui.footer { /* Increased specificity for SO snippet priority */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
